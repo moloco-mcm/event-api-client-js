@@ -1,6 +1,6 @@
 export type RetailEventType =
   | 'SEARCH'
-  | 'CONTENT_VIEW'
+  | 'ITEM_PAGE_VIEW'
   | 'ADD_TO_CART'
   | 'PURCHASE'
   | 'ADD_TO_WISHLIST'

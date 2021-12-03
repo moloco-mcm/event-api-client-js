@@ -6,7 +6,7 @@
   "types": "./dist/types/index.d.ts",
   "sideEffects": false,
   "files": [
-    "./dist"
+    "dist"
   ],
   "scripts": {
     "build": "yarn clean && yarn build:cjs && yarn build:esm",
@@ -68,5 +68,8 @@
       "eslint",
       "git add"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -16,7 +16,7 @@ const insertEvent: AxiosFn<InsertEventParams, InsertEventHttpRequestBody> = (
 
   return axios.request({
     method: 'POST',
-    url: `/platforms/${platformId}/events`,
+    url: `/platforms/${platformId}/userevents`,
     data,
   });
 };

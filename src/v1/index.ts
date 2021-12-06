@@ -12,10 +12,10 @@ export type CreateClientOptions = {
 export function createClient(options: CreateClientOptions) {
   const { baseURL, platformId, apiKey } = options;
 
-  const url = baseURL ?? `https://ingestfnt.adsmoloco.com`;
+  const url = baseURL ?? `https://evt-sel.rmp-api.moloco.com`;
 
   const axios = Axios.create({
-    baseURL: `${url}/retail/v1`,
+    baseURL: `${url}/rmp/event/v1`,
     headers: {
       'Content-Type': 'application/json',
       'X-API-Key': apiKey,

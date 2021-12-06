@@ -7,7 +7,7 @@ type Config = {
 
 const insertEvent = (config: Config) => {
   return rest.post(
-    `${config.baseURL}/platforms/:platformId/events`,
+    `${config.baseURL}/platforms/:platformId/userevents`,
     (req, res, ctx) => {
       const header = req.headers.get('x-api-key');
       if (!header) {
@@ -32,7 +32,7 @@ export const getHandlers = (options: { baseURL: string }) => {
   const { baseURL } = options;
 
   const config = {
-    baseURL: `${baseURL}/retail/v1`,
+    baseURL: `${baseURL}/rmp/event/v1`,
   };
 
   return [insertEvent(config)];

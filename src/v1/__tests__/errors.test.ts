@@ -54,7 +54,7 @@ describe('client should throw the correct type of error', () => {
   test('should throw NetworkError when network error is occurred', async () => {
     server.use(
       rest.post(
-        `${MOCK_BASE_URL}/retail/v1/platforms/:platformId/events`,
+        `${MOCK_BASE_URL}/rmp/event/v1/platforms/:platformId/userevents`,
         (_req, res) => {
           return res.networkError('failed to connect');
         }

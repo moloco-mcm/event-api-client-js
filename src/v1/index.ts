@@ -10,9 +10,9 @@ export type CreateClientOptions = {
 };
 
 export function createClient(options: CreateClientOptions) {
-  const { baseURL, platformId, apiKey } = options;
+  const { baseURL, region = 'sel', platformId, apiKey } = options;
 
-  const url = baseURL ?? `https://evt-sel.rmp-api.moloco.com`;
+  const url = baseURL ?? `https://evt-${region}.rmp-api.moloco.com`;
 
   const axios = Axios.create({
     baseURL: `${url}/rmp/event/v1`,

@@ -28,6 +28,7 @@ export const client = v1.createClient({
 ### Send ADD_TO_CART event
 
 ```javascript
+// This example is for reporting your events server-to-server (S2S).
 import { client } from '../common/event-api-client';
 import usParser from 'ua-parser-js';
 

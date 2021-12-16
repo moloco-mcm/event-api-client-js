@@ -19,7 +19,7 @@ yarn add @moloco-rmp/event-api-client
 Please contact your MOLOCO account manager to get your RMP Event API Key and Platform ID
 
 ```javascript
-const client = v1.createClient({
+export const client = v1.createClient({
   apiKey: process.env.RMP_EVENT_API_KEY,
   platformId: process.env.RMP_PLATFORM_ID,
 });
@@ -28,6 +28,12 @@ const client = v1.createClient({
 ### Send ADD_TO_CART event
 
 ```javascript
+import client from '../common/decision-api-client';
+import usParser from 'ua-parser-js';
+
+const { session, headers } = req;
+const ua = usParser(headers['user-agent']);
+
 client.events.insertEvent({
   id: randomString(),
   eventType: 'ADD_TO_CART',
@@ -100,6 +106,33 @@ client.events.insertEvent({
     },
   ],
 });
+```
+
+### Handling errors
+
+```javascript
+import client from '../common/decision-api-client';
+import { v1 } from '@moloco-rmp/decision-api-client';
+
+client.events
+  .insertEvent({ ... })
+  .catch((error) => {
+    console.error(error.message);
+    if (error instanceof v1.errors.InternalServerError) {
+      ...
+    } else if (error instanceof v1.errors.BadRequestError) {
+      ...
+    } else if (error instanceof v1.errors.ForbiddenError) {
+      ...
+    } else if (error instanceof v1.errors.NetworkError) {
+      ...
+    } else if (error instanceof v1.errors.NotFoundError) {
+      ...
+    } else if (error instanceof v1.errors.UnauthorizedError) {
+      ...
+    } else if (error instanceof v1.errors.UnknownError) {
+    }
+  });
 ```
 
 ## Documentation

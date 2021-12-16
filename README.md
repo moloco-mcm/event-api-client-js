@@ -28,7 +28,7 @@ export const client = v1.createClient({
 ### Send ADD_TO_CART event
 
 ```javascript
-import client from '../common/decision-api-client';
+import client from '../common/event-api-client';
 import usParser from 'ua-parser-js';
 
 const { session, headers } = req;
@@ -111,8 +111,8 @@ client.events.insertEvent({
 ### Handling errors
 
 ```javascript
-import client from '../common/decision-api-client';
-import { v1 } from '@moloco-rmp/decision-api-client';
+import client from '../common/event-api-client';
+import { v1 } from '@moloco-rmp/event-api-client';
 
 client.events
   .insertEvent({ ... })

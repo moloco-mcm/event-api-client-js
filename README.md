@@ -35,7 +35,7 @@ import usParser from 'ua-parser-js';
 const { session, headers } = req;
 const ua = usParser(headers['user-agent']);
 
-client.events.insertEvent({
+client.insertEvent({
   id: randomString(),
   eventType: 'ADD_TO_CART',
   timestamp: Date.now(),
@@ -60,7 +60,7 @@ client.events.insertEvent({
 ### Send PURCHASE event
 
 ```javascript
-client.events.insertEvent({
+client.insertEvent({
   id: randomString(),
   eventType: 'PURCHASE',
   timestamp: Date.now(),
@@ -87,7 +87,7 @@ client.events.insertEvent({
 ### Send ITEM_PAGE_VIEW event
 
 ```javascript
-client.events.insertEvent({
+client.insertEvent({
   id: randomString(),
   eventType: 'ITEM_PAGE_VIEW',
   timestamp: Date.now(),
@@ -115,8 +115,7 @@ client.events.insertEvent({
 import { client } from '../common/event-api-client';
 import { v1 } from '@moloco-rmp/event-api-client';
 
-client.events
-  .insertEvent({ ... })
+client.insertEvent({ ... })
   .catch((error) => {
     console.error(error.message);
     if (error instanceof v1.errors.InternalServerError) {

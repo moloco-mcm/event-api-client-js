@@ -24,9 +24,9 @@ describe('client should throw the correct type of error', () => {
       apiKey: '',
       platformId: KNOWN_PLATFORM_ID,
     });
-    await expect(
-      client.events.insertEvent(INSERT_EVENT_PARAMS)
-    ).rejects.toThrow(UnauthorizedError);
+    await expect(client.insertEvent(INSERT_EVENT_PARAMS)).rejects.toThrow(
+      UnauthorizedError
+    );
   });
 
   test('should throw ForbiddenError when wrong api key is provided', async () => {
@@ -35,9 +35,9 @@ describe('client should throw the correct type of error', () => {
       apiKey: 'wrong-key',
       platformId: KNOWN_PLATFORM_ID,
     });
-    await expect(
-      client.events.insertEvent(INSERT_EVENT_PARAMS)
-    ).rejects.toThrow(ForbiddenError);
+    await expect(client.insertEvent(INSERT_EVENT_PARAMS)).rejects.toThrow(
+      ForbiddenError
+    );
   });
 
   test('should throw NotFoundError when wrong platform id is provided', async () => {
@@ -46,9 +46,9 @@ describe('client should throw the correct type of error', () => {
       apiKey: REGISTERED_API_KEY,
       platformId: 'unknown_platform_id',
     });
-    await expect(
-      client.events.insertEvent(INSERT_EVENT_PARAMS)
-    ).rejects.toThrow(NotFoundError);
+    await expect(client.insertEvent(INSERT_EVENT_PARAMS)).rejects.toThrow(
+      NotFoundError
+    );
   });
 
   test('should throw NetworkError when network error is occurred', async () => {
@@ -66,8 +66,8 @@ describe('client should throw the correct type of error', () => {
       apiKey: REGISTERED_API_KEY,
       platformId: KNOWN_PLATFORM_ID,
     });
-    await expect(
-      client.events.insertEvent(INSERT_EVENT_PARAMS)
-    ).rejects.toThrow(NetworkError);
+    await expect(client.insertEvent(INSERT_EVENT_PARAMS)).rejects.toThrow(
+      NetworkError
+    );
   });
 });

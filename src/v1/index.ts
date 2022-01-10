@@ -1,15 +1,11 @@
 import Axios from 'axios';
 import events from './events';
-import { Context } from './types';
+import { Client, Context, CreateClientOptions } from './types';
 
-export type CreateClientOptions = {
-  baseURL?: string;
-  region?: string;
-  platformId: string;
-  apiKey: string;
-};
-
-export function createClient(options: CreateClientOptions) {
+/**
+ * @category Client
+ */
+export function createClient(options: CreateClientOptions): Client {
   const { baseURL, region = 'sel', platformId, apiKey } = options;
 
   const url = baseURL ?? `https://evt-${region}.rmp-api.moloco.com`;
@@ -27,12 +23,13 @@ export function createClient(options: CreateClientOptions) {
     platformId,
   };
 
-  return {
-    events: events(context),
-  };
+  return events(context);
 }
 
 // export error types
+/**
+ * @category Error
+ */
 export * as errors from './utils/errors';
 
 // export common data types

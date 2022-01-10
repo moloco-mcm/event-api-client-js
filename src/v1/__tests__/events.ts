@@ -58,7 +58,7 @@ describe('events', () => {
         },
       };
 
-      expect(() => client.events.insertEvent(params)).not.toThrow();
+      expect(() => client.insertEvent(params)).not.toThrow();
     });
   });
 });

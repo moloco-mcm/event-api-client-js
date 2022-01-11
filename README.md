@@ -138,3 +138,5 @@ client.insertEvent({ ... })
 ## Documentation
 
 [RMP Event API Reference](https://moloco-rmp.readme.io/reference)
+
+© Moloco, Inc. 2022 All rights reserved. Released under Apache 2.0 License

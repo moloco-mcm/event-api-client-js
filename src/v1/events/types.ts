@@ -30,6 +30,7 @@ export type InsertEventParams = {
     amount: number;
   };
   searchQuery?: string;
+  referrerPageId?: string;
 };
 
 export type InsertEventHttpRequestBody = {
@@ -62,4 +63,5 @@ export type InsertEventHttpRequestBody = {
     amount: number;
   };
   search_query?: string;
+  referrer_page_id?: string;
 };

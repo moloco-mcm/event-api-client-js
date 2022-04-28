@@ -54,7 +54,7 @@ client.insertEvent({
       quantity: product.quantity,
     },
   ],
-  referrerPageId: 'CATEGORY_HOME_PAGE',
+  referrerPageId: `PRODUCT_DETAIL_PAGE_${productId}`,
 });
 ```
 
@@ -108,7 +108,7 @@ client.insertEvent({
       quantity: 1,
     },
   ],
-  referrerPageId: 'PRODUCT_DETAIL_PAGE',
+  referrerPageId: `CATEGORY_HOME_PAGE_${categoryId}`,
 });
 ```
 

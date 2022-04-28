@@ -43,7 +43,7 @@ describe('auction/utils', () => {
         amount: 300,
       },
       searchQuery: 'test-query',
-      referrerPageId: 'https://my-domain.com',
+      referrerPageId: 'PAGE_ID',
     };
 
     expect(
@@ -88,7 +88,7 @@ describe('auction/utils', () => {
         amount: 300,
       },
       search_query: 'test-query',
-      referrer_page_id: 'https://my-domain.com',
+      referrer_page_id: 'PAGE_ID',
     });
   });
 });

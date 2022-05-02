@@ -32,5 +32,6 @@ export const translateInsertEventParamsToInsertEventRequestBody = (
     amount: params.revenue.amount,
   },
   search_query: params.searchQuery,
+  page_id: params.pageId,
   referrer_page_id: params.referrerPageId,
 });

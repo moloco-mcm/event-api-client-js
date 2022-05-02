@@ -54,7 +54,8 @@ client.insertEvent({
       quantity: product.quantity,
     },
   ],
-  referrerPageId: `PRODUCT_DETAIL_PAGE_${productId}`,
+  pageId: `CATEGORY_HOME_PAGE:${categoryId}`,
+  referrerPageId: `PRODUCT_DETAIL_PAGE:${productId}`,
 });
 ```
 
@@ -82,6 +83,7 @@ client.insertEvent({
     currency: 'USD',
     amount: totalAmount,
   },
+  pageId: 'ORDER_SUMMARY_PAGE'
   referrerPageId: 'CART_PAGE',
 });
 ```
@@ -108,7 +110,8 @@ client.insertEvent({
       quantity: 1,
     },
   ],
-  referrerPageId: `CATEGORY_HOME_PAGE_${categoryId}`,
+  pageId: `PRODUCT_DETAIL_PAGE:${productId}`,
+  referrerPageId: `CATEGORY_HOME_PAGE:${categoryId}`,
 });
 ```
 

@@ -10,7 +10,8 @@ export type RetailEventType =
   | 'PURCHASE'
   | 'ADD_TO_WISHLIST'
   | 'HOME'
-  | 'LAND';
+  | 'LAND'
+  | 'PAGE_VIEW';
 
 /**
  * @category Event

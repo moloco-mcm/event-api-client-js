@@ -45,6 +45,11 @@ describe('auction/utils', () => {
       searchQuery: 'test-query',
       pageId: 'PAGE_ID',
       referrerPageId: 'REFERRER_PAGE_ID',
+      shippingCharge: {
+        currency: 'USD',
+        amount: 0.99,
+      },
+      decisionTrackId: 'TRACK_ID',
     };
 
     expect(
@@ -91,6 +96,11 @@ describe('auction/utils', () => {
       search_query: 'test-query',
       page_id: 'PAGE_ID',
       referrer_page_id: 'REFERRER_PAGE_ID',
+      shipping_charge: {
+        currency: 'USD',
+        amount: 0.99,
+      },
+      decision_track_id: 'TRACK_ID',
     });
   });
 });

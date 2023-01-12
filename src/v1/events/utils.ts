@@ -34,4 +34,9 @@ export const translateInsertEventParamsToInsertEventRequestBody = (
   search_query: params.searchQuery,
   page_id: params.pageId,
   referrer_page_id: params.referrerPageId,
+  shipping_charge: params.shippingCharge && {
+    currency: params.shippingCharge.currency,
+    amount: params.shippingCharge.amount,
+  },
+  decision_track_id: params.decisionTrackId,
 });

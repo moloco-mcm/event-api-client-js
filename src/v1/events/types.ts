@@ -32,6 +32,11 @@ export type InsertEventParams = {
   searchQuery?: string;
   pageId?: string;
   referrerPageId?: string;
+  shippingCharge?: {
+    currency: string;
+    amount: number;
+  };
+  decisionTrackId?: string;
 };
 
 export type InsertEventHttpRequestBody = {
@@ -66,4 +71,9 @@ export type InsertEventHttpRequestBody = {
   search_query?: string;
   page_id?: string;
   referrer_page_id?: string;
+  shipping_charge?: {
+    currency: string;
+    amount: number;
+  };
+  decision_track_id?: string;
 };

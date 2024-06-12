@@ -1,6 +1,6 @@
-# MOLOCO RMP Event API Client for JavaScript
+# MOLOCO MCM Event API Client for JavaScript
 
-JavaScript/TypeScript library for MOLOCO RMP Event API
+JavaScript/TypeScript library for MOLOCO MCM Event API
 
 ## Installation
 
@@ -16,12 +16,12 @@ yarn add @moloco-rmp/event-api-client
 
 ### Setting API Credentials and Platform ID
 
-Please contact your MOLOCO account manager to get your RMP Event API Key and Platform ID
+Please contact your MOLOCO account manager to get your MCM Event API Key and Platform ID
 
 ```javascript
 export const client = v1.createClient({
-  apiKey: process.env.RMP_EVENT_API_KEY,
-  platformId: process.env.RMP_PLATFORM_ID,
+  apiKey: process.env.MCM_EVENT_API_KEY,
+  platformId: process.env.MCM_PLATFORM_ID,
 });
 ```
 
@@ -143,7 +143,7 @@ client.insertEvent({ ... })
 
 ## Documentation
 
-- [Full Library Reference](https://moloco-rmp.github.io/event-api-client-js)
-- [RMP Event API Reference](https://moloco-rmp.readme.io/reference)
+- [Full Library Reference](https://moloco-mcm.github.io/event-api-client-js)
+- [MCM Event API Reference]([https://moloco-rmp.readme.io/reference](https://mcm-docs.moloco.com/reference/rmpeventapi_postuserevent))
 
 © Moloco, Inc. 2022 All rights reserved. Released under Apache 2.0 License

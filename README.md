@@ -144,6 +144,6 @@ client.insertEvent({ ... })
 ## Documentation
 
 - [Full Library Reference](https://moloco-mcm.github.io/event-api-client-js)
-- [MCM Event API Reference]([https://moloco-rmp.readme.io/reference](https://mcm-docs.moloco.com/reference/rmpeventapi_postuserevent))
+- [MCM Event API Reference](https://mcm-docs.moloco.com/reference/rmpeventapi_postuserevent)
 
-© Moloco, Inc. 2022 All rights reserved. Released under Apache 2.0 License
+© Moloco, Inc. 2024 All rights reserved. Released under Apache 2.0 License

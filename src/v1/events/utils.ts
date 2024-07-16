@@ -14,6 +14,7 @@ export const translateInsertEventParamsToInsertEventRequestBody = (
     os_version: params.device.osVersion,
     advertising_id: params.device.advertisingId,
     unique_device_id: params.device.uniqueDeviceId,
+    persistent_id: params.device.persistentId,
     model: params.device.model,
     ip: params.device.ip,
     ua: params.device.ua,

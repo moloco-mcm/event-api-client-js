@@ -12,6 +12,7 @@ export const INSERT_EVENT_PARAMS: InsertEventParams = {
     osVersion: '14.1',
     advertisingId: '7acefbed-d1f6-4e4e-aa26-74e93dd017e4',
     uniqueDeviceId: 'test_device_id',
+    persistentId: 'test_persistent_id',
     model: 'iPhone 7',
     ip: '127.0.0.1',
     ua: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36',

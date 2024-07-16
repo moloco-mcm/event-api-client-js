@@ -12,6 +12,7 @@ export type InsertEventParams = {
     osVersion?: string;
     advertisingId?: string;
     uniqueDeviceId?: string;
+    persistentId?: string;
     model?: string;
     ip?: string;
     ua?: string;
@@ -51,6 +52,7 @@ export type InsertEventHttpRequestBody = {
     os_version?: string;
     advertising_id?: string;
     unique_device_id?: string;
+    persistent_id?: string;
     model?: string;
     ip?: string;
     ua?: string;

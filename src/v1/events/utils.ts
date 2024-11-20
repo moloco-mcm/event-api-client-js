@@ -27,6 +27,8 @@ export const translateInsertEventParamsToInsertEventRequestBody = (
       amount: item.price.amount,
     },
     quantity: item.quantity,
+    item_group_id: item.itemGroupId,
+    seller_id: item.sellerId,
   })),
   revenue: params.revenue && {
     currency: params.revenue.currency,

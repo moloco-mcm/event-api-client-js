@@ -16,7 +16,7 @@ export type RetailEventType =
 /**
  * @category Event
  */
-export type ChannelType = 'APP' | 'SITE';
+export type ChannelType = 'APP' | 'SITE' | 'DESKTOP_SITE' | 'MOBILE_SITE';
 
 /**
  * @category Client

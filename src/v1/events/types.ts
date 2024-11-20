@@ -25,6 +25,8 @@ export type InsertEventParams = {
       amount: number;
     };
     quantity: number;
+    itemGroupId?: string;
+    sellerId?: string;
   }[];
   revenue?: {
     currency: string;
@@ -65,6 +67,8 @@ export type InsertEventHttpRequestBody = {
       amount: number;
     };
     quantity: number;
+    item_group_id?: string;
+    seller_id?: string;
   }[];
   revenue?: {
     currency: string;

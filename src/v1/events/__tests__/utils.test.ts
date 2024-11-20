@@ -37,6 +37,8 @@ describe('auction/utils', () => {
             amount: 200,
           },
           quantity: 10,
+          itemGroupId: 'test-item-group-id',
+          sellerId: 'test-seller-id',
         },
       ],
       revenue: {
@@ -89,6 +91,8 @@ describe('auction/utils', () => {
             amount: 200,
           },
           quantity: 10,
+          item_group_id: 'test-item-group-id',
+          seller_id: 'test-seller-id',
         },
       ],
       revenue: {

@@ -26,6 +26,7 @@ export type CreateClientOptions = {
   region?: string;
   platformId: string;
   apiKey: string;
+  apiDomain?: string;
 };
 
 /**

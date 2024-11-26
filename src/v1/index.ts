@@ -6,9 +6,15 @@ import { Client, Context, CreateClientOptions } from './types';
  * @category Client
  */
 export function createClient(options: CreateClientOptions): Client {
-  const { baseURL, region = 'sel', platformId, apiKey } = options;
+  const {
+    baseURL,
+    region = 'sel',
+    platformId,
+    apiKey,
+    apiDomain = 'rmp-api.moloco.com',
+  } = options;
 
-  const url = baseURL ?? `https://evt-${region}.rmp-api.moloco.com`;
+  const url = baseURL ?? `https://evt-${region}.${apiDomain}`;
 
   const axios = Axios.create({
     baseURL: `${url}/rmp/event/v1`,

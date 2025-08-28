@@ -2,6 +2,10 @@
 
 JavaScript/TypeScript library for MOLOCO MCM Event API
 
+> Note: 
+> This library is intended to be used in trusted execution environments (such as backend services or secure infrastructure).    
+> The standard integration pattern is to capture user events in your app, then forward those events to Moloco using this library within your backend or event pipeline.
+
 ## Installation
 
 ```shell

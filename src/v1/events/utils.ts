@@ -22,7 +22,7 @@ export const translateInsertEventParamsToInsertEventRequestBody = (
   },
   items: params.items?.map((item) => ({
     id: item.id,
-    price: {
+    price: item.price && {
       currency: item.price.currency,
       amount: item.price.amount,
     },

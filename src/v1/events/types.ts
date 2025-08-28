@@ -5,7 +5,7 @@ export type InsertEventParams = {
   eventType: RetailEventType;
   timestamp: number;
   channelType: ChannelType;
-  userId: string;
+  userId?: string;
   sessionId?: string;
   device?: {
     os: string;
@@ -20,7 +20,7 @@ export type InsertEventParams = {
   };
   items?: {
     id: string;
-    price: {
+    price?: {
       currency: string;
       amount: number;
     };
@@ -47,7 +47,7 @@ export type InsertEventHttpRequestBody = {
   event_type: string;
   timestamp: number;
   channel_type: string;
-  user_id: string;
+  user_id?: string;
   session_id?: string;
   device?: {
     os: string;
@@ -62,7 +62,7 @@ export type InsertEventHttpRequestBody = {
   };
   items?: {
     id: string;
-    price: {
+    price?: {
       currency: string;
       amount: number;
     };
